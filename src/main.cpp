@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <stdexcept>
+#include <vector>
 struct TGAHeader {
     char idLength;
     char colorMapType;
@@ -320,13 +321,6 @@ int main() {
         reversed.data = image1.data;
         std::reverse(reversed.data.begin(), reversed.data.end());
         writeImageData(reversed, "output/part10.tga");
-
-
-
-
-
-
-
     } catch (const std::exception& e) {
         std::cerr << "Error: " << e.what() << std::endl;
     }
